@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+    family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?
+family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&
+family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="container" id="container">
+
+        <!-- displays header -->
+        <header class="header">
+            <img src="image/spring-roll.jpg">
+            <h1>Jimmy’s Diner</h1>
+            <p>The best burgers and pizzas in town.</p>
+        </header>
+
+        <!-- displays menu -->
+        <main>
+            <div id="menu-container"></div>
+        </main>
+
+        <!-- displays order made -->
+        <section>
+            <div class="display-order" id="display-order">
+                <p class="display-item" id="display-item"></p>
+                <p class="total-price" id="total-price">Total price:<span class="total-price-el" id="total-price-el"></span></p>
+                <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
+            </div>
+        </scetion>
+
+        <!-- displays payment form details -->
+        <section class="payment" id="payment">
+            <p class="close-payment-form" id="close-payment-form">X</p>
+            <h3 class="payment-form-title"> Enter card details </h3>
+            <form class="payment-form" id="payment-form">
+                <input 
+                type="text" 
+                class="input-box"
+                id="buyer-name" 
+                name="buyer-name" 
+                placeholder="Enter your name"
+                pattern="[A-Z\s]+"
+                title="Use block letters"
+                required
+                >
+                <input 
+                inputmode="number" 
+                class="input-box"
+                id="card-number" 
+                name="cardNumber" 
+                placeholder="Enter card number"
+                pattern="[0-9]{6}"
+                title="Input must be 6 digits"
+                required
+                >
+                <input 
+                inputmode="number"
+                class="input-box" 
+                id="cvv-number" 
+                name="cvv" 
+                placeholder="CVV"
+                pattern="[0-9]{3}"
+                title="Input must be 3 digits"
+                required
+                >
+                <button 
+                type="submit" 
+                class="input-box pay-btn" 
+                id="pay-btn"> Pay </button>
+            </form>
+        </section>
+
+        <!-- displays message -->
+        <div class="message" id="message"></div>
+
+    </section>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
